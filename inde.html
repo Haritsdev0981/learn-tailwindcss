@@ -10,15 +10,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        spacing: {
+                            13: '3.25rem',
+                        },
+                        fontFamily: {
+                            plusjakartasans: ['Plus Jakarta Sans'],
+                        }
+                    }
+                }
+            };
+        </script>
     <title>Document</title>
-    <!-- <style type="text/tailwindcss">
+    <style type="text/tailwindcss">
         * {
             border: 1px solid red;
         }
-    </style> -->
+        
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+        
+    </style>
+    
 </head>
 
-<body>
+<body class="dark:text-slate-200 dark:bg-slate-800">
     <h1
         class="text-center font-bold text-7xl uppercase bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent">
         2 Bulan Gasskeun</h1>
@@ -37,7 +58,7 @@
     </section>
 
 
-    <section class="mb-96 font-plusjakartasans max-w-3xl mx-auto">
+    <section class="mb-96 font-plusjakartasans max-w-3xl mx-auto items">
         <h2
             class="mb-2 text-4xl font-bold tracking-wider bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent">
             Belajar mengenai typography, Backgrounds, Borders, Effect pada tailwindscss</h2>
@@ -47,8 +68,10 @@
             doloremque exercitationem, accusamus natus rerum. Pariatur expedita facere totam eveniet debitis voluptatum
             soluta laboriosam tempore aliquam ex iste ea ipsa placeat maxime, error temporibus cumque! Similique
             expedita ratione, libero dicta at possimus ad nesciunt. Exercitationem veritatis soluta nulla dolores.</p>
-        <div class="bg-fixed bg-cover h-56 object-cover rounded-xl mb-4 shadow-xl shadow-yellow-100 overflow-hidden" style="background-image: url(testing.png);">
-        <div class="w-full h-full bg-yellow-400 mix-blend-darken"></div></div>
+        <div class="bg-fixed bg-cover h-56 object-cover rounded-xl mb-4 shadow-xl shadow-yellow-100 overflow-hidden"
+            style="background-image: url(testing.png);">
+            <div class="w-full h-full bg-yellow-400 mix-blend-darken backdrop-blur-md hover:backdrop-blur-none"></div>
+        </div>
         <p class="mb-4 antialiased hover:subpixel-antialiased">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Magni tenetur dicta sint ipsum debitis
             natus. Eum enim aperiam voluptatibus incidunt!</p>
@@ -62,25 +85,75 @@
 
         <div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-scroll bg-scroll rounded-2xl"
             style="background-image: url('https://source.unsplash.com/1000x600?flower');">
-            <p class="p-5 text-1xl text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil qui atque nemo ea enim illum laboriosam debitis pariatur aut distinctio ut tempore temporibus iusto beatae, rerum repellendus vero. Laudantium facilis commodi reprehenderit enim possimus consectetur temporibus fuga error voluptatem est tempora mollitia, corrupti saepe, dicta animi eum praesentium iure eius excepturi rem id ipsum? Facilis, reprehenderit? Nesciunt incidunt laboriosam eveniet ratione commodi. Cumque ullam eum accusantium, illo in quam assumenda magni voluptatum recusandae. Facere, odio nam voluptas et rerum maxime veritatis? Harum vel commodi, dolorum perferendis accusamus eligendi earum provident exercitationem, natus eaque error hic dicta? Velit aliquid fuga debitis eligendi quisquam molestiae, dignissimos quaerat nihil! Velit pariatur cum, totam provident unde odio sunt dicta et expedita ipsum veniam quidem qui porro modi vero similique, iste quos possimus amet cupiditate repudiandae! Dolor expedita, sit illo, assumenda, quasi dolorum tempora quas cum voluptatibus unde voluptates odio facilis temporibus. Quae quia error nemo tenetur natus. Dolor amet reiciendis quia similique nulla eius natus esse alias dolore! Non labore molestias incidunt nulla corporis tenetur corrupti unde repellendus nemo quia voluptatum, aliquid distinctio consectetur, vitae fuga maxime atque eos culpa optio saepe ea id et odit. Tempora aliquid deserunt nostrum beatae similique eius placeat.</p>
+            <p class="p-5 text-1xl text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil qui atque
+                nemo ea enim illum laboriosam debitis pariatur aut distinctio ut tempore temporibus iusto beatae, rerum
+                repellendus vero. Laudantium facilis commodi reprehenderit enim possimus consectetur temporibus fuga
+                error voluptatem est tempora mollitia, corrupti saepe, dicta animi eum praesentium iure eius excepturi
+                rem id ipsum? Facilis, reprehenderit? Nesciunt incidunt laboriosam eveniet ratione commodi. Cumque ullam
+                eum accusantium, illo in quam assumenda magni voluptatum recusandae. Facere, odio nam voluptas et rerum
+                maxime veritatis? Harum vel commodi, dolorum perferendis accusamus eligendi earum provident
+                exercitationem, natus eaque error hic dicta? Velit aliquid fuga debitis eligendi quisquam molestiae,
+                dignissimos quaerat nihil! Velit pariatur cum, totam provident unde odio sunt dicta et expedita ipsum
+                veniam quidem qui porro modi vero similique, iste quos possimus amet cupiditate repudiandae! Dolor
+                expedita, sit illo, assumenda, quasi dolorum tempora quas cum voluptatibus unde voluptates odio facilis
+                temporibus. Quae quia error nemo tenetur natus. Dolor amet reiciendis quia similique nulla eius natus
+                esse alias dolore! Non labore molestias incidunt nulla corporis tenetur corrupti unde repellendus nemo
+                quia voluptatum, aliquid distinctio consectetur, vitae fuga maxime atque eos culpa optio saepe ea id et
+                odit. Tempora aliquid deserunt nostrum beatae similique eius placeat.</p>
+        </div>
+
+        <hr class="my-10">
+
+        <div class="flex justify-center ">
+            <span class="text-sm text-slate-500 mr-1">Light</span>
+            <input type="checkbox" class="hidden" id="toggle"/>
+            <label for="toggle">
+                <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                    <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                </div>
+            </label>
+            <span class="text-sm text-slate-500 ml-1">Dark</span>
+        </div>
+
+        <button
+            class="my-8 bg-yellow-300 px-5 py-2 rounded-full font-semibold font-plusjakartasans block mx-auto hover:bg-yellow-500 active:bg-yellow-700 focus:ring focus:ring-purple-700 dark:bg-slate-300 dark:text-slate-700 dark:hover:text-slate-900 dark:hover:bg-slate-100">Testing
+            Button</button>
+
+        <div
+            class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-plusjakartasans hover:bg-yellow-500 group dark:hover:bg-slate-300">
+            <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My
+                Card</h5>
+            <p
+                class="text-slate-600 group-hover:text-white selection:bg-green-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-4 dark:group-hover:text-slate-800">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolor excepturi non alias aut. Obcaecati,
+                atque, ex incidunt maiores dolor nihil temporibus vero inventore ducimus, quis unde iusto voluptatem
+                quas.</p>
+        </div>
+
+
+        <div class="max-w-lg border-slate-200 rounded-xl mx-auto shadow-md border p-5">
+            <form action="">
+                <label for="email">
+                    <span
+                        class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+                    <input type="email" id="email" placeholder="Masukan Email..."
+                        class="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus-within:border-pink-700 peer" />
+                    <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">email tidak falid</p>
+                </label>
+            </form>
         </div>
 
     </section>
 
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html')
+
+        checkbox.addEventListener('click', function(){
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        })
+    </script>
+
 </body>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                spacing: {
-                    13: '3.25rem',
-                },
-                fontFamily: {
-                    plusjakartasans: ['Plus Jakarta Sans'],
-                }
-            }
-        }
-    };
-</script>
 
 </html>

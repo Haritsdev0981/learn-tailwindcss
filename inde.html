@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -24,12 +24,16 @@
                     animation: {
                         'spin-slow': 'spin 3s linear infinite',
                         'bounce-slow': 'bounce 3s infinite',
-                        goyang : 'wiggle 1s ease-in-out infinite'
+                        goyang: 'wiggle 1s ease-in-out infinite'
                     },
                     keyframes: {
                         wiggle: {
-                            '0%, 100%' : { transform: 'rotate(-3deg)'},
-                            '50%' : {transform: 'rotate(3deg)'}
+                            '0%, 100%': {
+                                transform: 'rotate(-3deg)'
+                            },
+                            '50%': {
+                                transform: 'rotate(3deg)'
+                            }
                         },
                     },
                 },
@@ -38,9 +42,9 @@
     </script>
     <title>Document</title>
     <style type="text/tailwindcss">
-        * {
+        /* * {
             border: 1px solid red;
-        }
+        } */
         
         #toggle:checked ~ label div.toggle-circle {
             @apply translate-x-3;
@@ -113,17 +117,15 @@
                 odit. Tempora aliquid deserunt nostrum beatae similique eius placeat.</p>
         </div>
 
-        <hr class="my-10">
-
-        <div class="flex justify-center ">
-            <span class="text-sm text-slate-500 mr-1">Light</span>
-            <input type="checkbox" class="hidden" id="toggle" />
-            <label for="toggle">
-                <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
-                    <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
-                </div>
-            </label>
-            <span class="text-sm text-slate-500 ml-1">Dark</span>
+        <hr class="my-10"> <div class="flex justify-center ">
+        <span class="text-sm text-slate-500 mr-1">Light</span>
+        <input type="checkbox" class="hidden" id="toggle" />
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-1">Dark</span>
         </div>
 
         <button
@@ -155,23 +157,44 @@
             </form>
         </div>
 
-        <hr class="my-20">
-
-        <div
-            class="w-40 h-40 bg-yellow-500 mx-auto rounded-lg shadow-lg hover:rotate-45 hover:scale-150 hover:translate-x-16 hover:shadow-lg hover:shadow-pink-300 hover:bg-pink-500 transition-transform duration-500 transform-gpu dark:bg-slate-300 ">
-            Index<span class="bottom-0 right-0 absolute border-none">index</span></div>
-
-        <div class="w-40 h-40 mx-auto my-20 group">
-            <span class="hidden group-hover:block">hidden</span>
-            <div
-                class="w-full h-full bg-pink-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-100">
-            </div>
-        </div>
-
-        <div class="w-40 h-40 bg-pink-500 mx-auto shadow-lg my-20 rounded-lg animate-goyang"></div>
-
-
     </section>
+
+    <hr class="my-20">
+
+
+    <div
+        class="w-40 h-40 bg-yellow-500 mx-auto rounded-lg shadow-lg hover:rotate-45 hover:scale-150 hover:translate-x-16 hover:shadow-lg hover:shadow-pink-300 hover:bg-pink-500 transition-transform duration-500 transform-gpu dark:bg-slate-300 ">
+        Index<span class="bottom-0 right-0 absolute border-none">index</span></div>
+
+    <div class="w-40 h-40 mx-auto my-20 group">
+        <span class="hidden group-hover:block">hidden</span>
+        <div
+            class="w-full h-full bg-pink-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-100">
+        </div>
+    </div>
+
+    <div class="w-40 h-40 bg-pink-500 mx-auto shadow-lg my-20 rounded-lg animate-goyang"></div>
+
+
+
+    <hr class="my-20 border-t-4">
+
+    <div class="container mx-auto animate-goyang">
+        <div class=" rounded-lg border shadow-lg p-10 relative">
+            
+            <img src="https://source.unsplash.com/100x100?flower" alt="" class="float-left mr-4">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed nesciunt eos corporis blanditiis sit
+                maiores, magnam ratione nostrum suscipit doloribus dolorem neque quod corrupti nihil qui explicabo at
+                perspiciatis laboriosam totam unde recusandae? Voluptatum tenetur ipsum nobis iusto! Consequuntur magni
+                laboriosam dolores hic at nemo exercitationem consectetur atque omnis, eum, sit accusantium amet!
+                Facere, consequuntur quam modi minima, soluta cumque voluptatem sint reprehenderit quidem nisi incidunt
+                dicta aliquid odit itaque corporis, fugit nobis. Fugiat assumenda illo ullam sed totam culpa inventore
+                unde excepturi reiciendis facere minima, reprehenderit nihil, nobis aspernatur dignissimos magnam
+                necessitatibus provident consequatur architecto. Impedit architecto maxime laborum!</p>
+        </div>
+    </div>
+
+    <div class="w-10 h-10 bg-pink-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer"><a href="#" class="text-xl m-auto">↥</a></div>
 
     <script>
         const checkbox = document.querySelector('#toggle');

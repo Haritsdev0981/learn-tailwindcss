@@ -5,39 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <script>
         tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    spacing: {
-                        13: '3.25rem',
-                    },
-                    fontFamily: {
-                        plusjakartasans: ['Plus Jakarta Sans'],
-                    },
-                    animation: {
-                        'spin-slow': 'spin 3s linear infinite',
-                        'bounce-slow': 'bounce 3s infinite',
-                        goyang: 'wiggle 1s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        wiggle: {
-                            '0%, 100%': {
-                                transform: 'rotate(-3deg)'
-                            },
-                            '50%': {
-                                transform: 'rotate(3deg)'
-                            }
-                        },
-                    },
-                },
-            }
+            // darkMode: 'class',
+            // theme: {
+            //     extend: {
+            //         spacing: {
+            //             13: '3.25rem',
+            //         },
+            //         fontFamily: {
+            //             plusjakartasans: ['Plus Jakarta Sans'],
+            //         },
+            //         animation: {
+            //             'spin-slow': 'spin 3s linear infinite',
+            //             'bounce-slow': 'bounce 3s infinite',
+            //             goyang: 'wiggle 1s ease-in-out infinite'
+            //         },
+            //         keyframes: {
+            //             wiggle: {
+            //                 '0%, 100%': {
+            //                     transform: 'rotate(-3deg)'
+            //                 },
+            //                 '50%': {
+            //                     transform: 'rotate(3deg)'
+            //                 }
+            //             },
+            //         },
+            //     },
+            // }
         };
     </script>
     <title>Document</title>
@@ -46,9 +47,7 @@
             border: 1px solid red;
         } */
         
-        #toggle:checked ~ label div.toggle-circle {
-            @apply translate-x-3;
-        }
+        
         
     </style>
 
@@ -276,34 +275,34 @@
         <h2 class="h-15 text-xl font-semibold text-slate-700 md:col-start-4 md:row-start-2 md:flex"><span class="self-center">Welcome testing</span></h2>
         <div class="h-15 text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 md:flex"><span class="self-end">testing user</span></div>
 
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?tech)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 md:col-start-3">
+        <div class="group grid-card md:col-start-3">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?water)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?view)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?comic)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?art)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 md:col-start-2">
+        <div class="group grid-card md:col-start-2">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?doodle)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 md:col-start-4">
+        <div class="group grid-card md:col-start-4">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?human)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+        <div class="group grid-card">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?killer)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 md:col-start-3">
+        <div class="group grid-card md:col-start-3">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?tokyo)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
-        <div class="h-15 bg-yellow-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500 md:col-start-3">
+        <div class="group grid-card md:col-start-3">
             <div class="w-full h-full bg-[url(https://source.unsplash.com/640x480?london)] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"></div>
         </div>
     </div>
